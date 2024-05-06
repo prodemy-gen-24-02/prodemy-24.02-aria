@@ -1,0 +1,387 @@
+
+
+body {
+    font-size: 14px;
+    font-weight: normal;
+    font-family: monospace;
+}
+
+a {
+    color: #1f1f1f;
+    text-decoration: none;
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: 0;
+    font-weight: normal;
+    position: relative;
+    padding: 0 0 10px 0;
+    font-weight: normal;
+    line-height: normal;
+    color: #111111;
+    margin: 0
+}
+
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: #212121;
+    text-decoration: none!important;
+    opacity: 1
+}
+
+
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+p {
+    margin: 20px;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+a {
+    color: #222222;
+    text-decoration: none;
+    outline: none;
+}
+
+.layout_padding {
+    padding-top: 90px;
+    padding-bottom: 0px;
+}
+.column-pad{  
+    position: relative;
+    width: 30%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.sub-title{
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    color: #252424;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+/*slider*/
+
+  .next-button,.prev-button{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: #000;
+}
+.next-button {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+.banner_section {
+    width: 100%;
+    position: relative;
+    padding-bottom: 150px;
+    margin-top: auto;
+    height: 400px;
+}
+.carousel-item {display: none}
+.carousel-item img{
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+    vertical-align: middle;
+    height: 400px;
+}
+.slideshow-section{
+    position: relative;
+    z-index: 2;
+    padding-bottom: 20px;
+    float: left;
+}
+/*body*/
+.header-section{
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    margin-bottom: auto;
+    position: relative;
+
+}
+.header-main{    
+    width: 100%;
+    align-content: space-between; 
+    display: flex;
+    float: left;
+    padding-bottom: 10px;
+    position: relative;
+}
+.header-menu ul{
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    text-align: center;
+}
+.header-menu li{
+    float: left;
+}
+.header-left{
+    float: left;
+    width: 80%;
+}
+
+.header-right{
+    width: 20%;
+}
+.header-menu{
+    float: right;
+}
+.navbar-brand{
+    font-size: 24px;
+    color: #143a51;
+    font-weight: bold;
+}
+.category-section{
+    width: 100%;
+    float: left;
+    background-color: #143a51;
+    height: auto;
+    padding: 30px 0px;
+}
+.category-main{
+    width: 100%;
+    float: left;
+}
+.category-left{
+    width: 20%;
+    float: left;
+}
+.category-right{
+    width: 80%;
+    float: right;
+}
+.category-text{
+    width: 100%;
+    float: left;
+    font-size: 24px;
+    color: #fffefd;
+    text-align: center;
+    font-weight: bold;
+    padding: 0px;
+}
+.category-menu{
+    width: 100%;
+    float: left;
+}
+.category-menu ul{
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    text-align: center;
+}
+.category-menu li{
+    float: left;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 0px 10px;
+}
+.category-menu li a{
+    color: #ffffff;
+}
+.category-menu li a:hover{
+    color: #ff5d68;
+}
+.product-row{
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.box-man{
+    width: 100%;
+    border: 1px solid #9fa0a1;
+    padding-top: 20px;
+    border-radius: 1px;
+    padding-bottom: 50px;
+}
+.promo-text{
+    width: 100%;
+    font-size: 30px;
+    color: #2b2c31;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.promo-img{
+    text-align: center;
+    padding-top: 10px;
+    min-height: 250px;  
+}
+
+.promo-desc{
+    width: 100%;
+    justify-content: space-between;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+}
+.cart-bt {
+    width: 110px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.cart-bt a{
+    float: left;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #ff5d68;
+    text-align: center;
+    padding: 8px;
+}
+.cart-bt a:hover{
+    color: #ffffff;
+    background-color: #403f3f;
+}
+.brand-text {
+    font-size: 20px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 6px 0px 0px 0px;
+}
+
+.promo-price {
+    font-size: 16px;
+    color: #ff5d68;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 8px;
+}
+.promo-price a {
+    color: #ff5d68;
+}
+
+.promo-price-disc {
+    color: #636262;
+    font-size: 14px;
+    text-decoration: line-through;
+    padding: 8px;
+}
+
+.computers-section{
+    width: 100%;
+}
+
+.computer_main {
+    width: 100%;
+    border: 1px solid #9fa0a1;
+    padding: 50px 40px 50px 40px;
+    margin-top: 90px;
+    margin-top: 90px;
+}
+
+.computer-img {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    min-height: 280px;  
+}
+.computer-img img{
+    max-height: 280px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.computer-brand{
+    width: 100%;
+    font-size: 24px;
+    color: #403f3f;
+    text-align: center;
+    font-weight: bold;
+}
+
+.computer-desc {
+    width: 80%;
+    justify-content: space-between;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+}
+.product-text {
+    font-size: 20px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.price-text {
+    font-size: 16px;
+    color: #ff5d68;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.price-text a{
+    color: #ff5d68;
+}
+
+.price-text_1 {
+    font-size: 14px;
+    color: #636262;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: line-through;
+}
+.price-text_1 a{
+    color: #636262;
+}
