@@ -3,6 +3,7 @@
 
 <head>
    <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -10,8 +11,9 @@
    <div class="row">
       <div class="header-main">
          <div class="header-left">
+
             <span style="font-size:30px;cursor:pointer; color: #fff;" onclick="openNav()">
-               <img src="images/toggle-icon.png"></span>
+               <img src="images/toggle-icon.png" class="menu-btn"></span>
             <a class="navbar-brand" href="index.html">E-TALASE</a>
          </div>
          <div class="header-right">
@@ -23,6 +25,14 @@
                </ul>
             </nav>
          </div>
+      </div>
+      <div id="mySidenav" class="sidenav">
+         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+         <a href="index.html">Home</a>
+         <a href="#">Login</a>
+         <a href="#">Product</a>
+         <a href="#">About</a>
+         <a href="#">Contact</a>
       </div>
    </div>
 
@@ -259,3 +269,13 @@
          </div>
       </div>
    </div>
+
+   <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "20%";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+   </script> 
