@@ -70,7 +70,7 @@ p {
     text-transform: uppercase;
     font-weight: bold;
 }
-.row {
+.header-row,.footer-row {
     display: flex;
     flex-wrap: wrap;
     margin-left: auto;
@@ -152,6 +152,54 @@ p {
     font-weight: bold;
 }
 
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #143a51;;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #ff5d68;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.sidenav {
+        z-index: 99999999999999;
+        background-color: #143a51;;
+    }
+@media screen and (max-width: 450px) {
+    .sidenav {
+        padding-top: 15px;
+        background-color: #143a51;;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
 
 /*slider*/
 
@@ -522,16 +570,29 @@ color:#143a51;
 }
 
 /*responsive*/
-@media screen and (max-width:896px){
+@media screen and (max-width:896px) {
+    
+    .header-row{
+        background-color: white;
+        display: flexbox;
+        position: fixed;
+        z-index: 10;
+        width: 98%;
+    }
+
+    .sidenav a{
+        font-size: 70%;
+    }
+
     .promo-main{
         flex-wrap: wrap;
     }
     .category-section{
         float:right;
         width: 20%;
-        position: relative;
+        position: sticky;
         height: 100%;
-        bottom: 0;
+        
     }
 
     .category-main{
@@ -554,7 +615,7 @@ color:#143a51;
     .transform-zoom{
         display:inline-flex;
         flex-wrap: wrap;
-        flex-direction:row-reverse;
+        flex-direction:row;
     }
     .promo-zoom{
         width: 50%;
@@ -571,4 +632,5 @@ color:#143a51;
         margin-left: auto;
         margin-right: auto;
     }
+
 }
