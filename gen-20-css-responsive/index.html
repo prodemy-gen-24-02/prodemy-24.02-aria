@@ -5,13 +5,13 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
    <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 
 <body>
-   <div class="row">
+   <div class="header-row">
       <div class="header-main">
          <div class="header-left">
-
             <span style="font-size:30px;cursor:pointer; color: #fff;" onclick="openNav()">
                <img src="images/toggle-icon.png" class="menu-btn"></span>
             <a class="navbar-brand" href="index.html">E-TALASE</a>
@@ -25,6 +25,7 @@
                </ul>
             </nav>
          </div>
+
       </div>
       <div id="mySidenav" class="sidenav">
          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -79,7 +80,7 @@
          <div class="container">
             <h1 class="sub-title">PROMO</h1>
          </div>
-         <div class="product-row">
+         
             <div class="promo-main">
                <div class="promo-column">
                   <h3 class="promo-text">Mobile</h3>
@@ -116,11 +117,11 @@
                   <div class="cart-bt"><a href="#">Add to Cart</a></div>
                </div>
             </div>
-         </div>
+         
       </div>
    </div>
-   
-   <div class="product-row">
+
+   <div>
       <div class="computers-section layout-padding">
          <div class="container">
             <h1 class="sub-title">Computers & Gadgets</h1>
@@ -129,7 +130,7 @@
       <div class="computers-section">
          <div class="container-fluid">
             <div class="computer-main">
-               <div class="row">
+               <div class="product-row">
                   <div class="column-pad">
                      <div class="computer-img"><img src="pc.jpg"></div>
                      <h4 class="computer-brand">PC</h4>
@@ -162,7 +163,7 @@
          </div>
       </div>
    </div>
-   <div class="product-row">
+   <div>
       <div class="computers-section layout-padding">
          <div class="container">
             <h1 class="sub-title">Accessories</h1>
@@ -171,7 +172,7 @@
          <div class="computers-section">
             <div class="container-fluid">
                <div class="computer-main">
-                  <div class="row">
+                  <div class="product-row">
                      <div class="column-pad">
                         <div class="computer-img"><img src="logitech.jpg"></div>
                         <h4 class="computer-brand">Mouse</h4>
@@ -205,7 +206,7 @@
          </div>
       </div>
    </div>
-   <div class="row">
+   <div class="footer-row">
       <div class="footer-section">
          <div class="container">
             <div class="footer-icon">
@@ -223,7 +224,7 @@
                </div>
             </div>
             <div class="footer_section_2">
-               <div class="row">
+               <div class="footer-row">
                   <div class="col-lg-3 col-sm-6">
                      <h4 class="adderss_text">About</h4>
                      <p class="ipsum_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -272,10 +273,10 @@
 
    <script>
       function openNav() {
-        document.getElementById("mySidenav").style.width = "20%";
+         document.getElementById("mySidenav").style.width = "20%";
       }
-      
+
       function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
+         document.getElementById("mySidenav").style.width = "0";
       }
-   </script> 
+   </script>

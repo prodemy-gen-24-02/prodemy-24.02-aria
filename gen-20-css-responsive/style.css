@@ -291,12 +291,14 @@ p {
     color: #ff5d68;
 }
 .product-row{ /*overflow ke kanan kalau flex*/
-    display: flexbox;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
     flex-wrap: wrap;
     flex-direction: row;
 }
+
+
 .promo-main{  
     display: flex;
     flex-direction: row;
@@ -304,7 +306,7 @@ p {
     padding-left: 15px;
     margin-left: auto;
     margin-right: auto;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .promo-column{
     height: 460px;
@@ -624,9 +626,8 @@ color:#143a51;
         margin-right: auto;
     }
 
-    .computer-main>.row{
-        flex-direction:column ;
-
+    .computer-main>.product-row{
+        flex-direction:column;
     }
     .column-pad{ 
         margin-left: auto;
