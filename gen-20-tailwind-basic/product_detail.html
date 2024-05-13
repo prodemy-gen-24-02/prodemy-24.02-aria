@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Detail</title>
+    <style>
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #143a51;
+            ;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            text-align: center;
+        }
+
+        .next-button,
+        .prev-button {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: #000;
+        }
+
+        .next-button {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            vertical-align: middle;
+            object-fit: contain;
+        }
+    </style>
+    <script src="cdn.js"></script>
+    <script>
+
+    </script>
+
+</head>
+
+<body class="bg-gray-100">
+    <!--<div class="text-6xl text-gray-200 bg-sky-700">TEST</div>-->
+
+    <div id="header-section"
+        class="flex flex-row w-full h-1/6 text-sky-950 border-b-4 border-sky-950 border-solid justify-between p-5">
+        <div id="header-logo" class="flex flex-row items-center pl-2 justify-around w-50">
+            <img src="images/toggle-icon.png" class="menu-btn" onclick="openNav()">
+            <a href="index.html" class="text-2xl pl-4 font-semibold">E-TALASE</a>
+        </div>
+        <div class="items-end">
+            <nav id="header-menu">
+                <ul class="flex flex-row">
+                    <li><a href="#"><img src="images/user-icon.png"></a></li>
+                    <li><a href="#"><img src="images/trolly-icon.png"></a></li>
+                    <li><a href="#"><img src="images/search-icon.png"></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="sidenav"
+            class="sidenav flex flex-col text-gray-200 text-4xl bg-sky-700 w-1 hover:w-fit flex-wrap pl-10 pr-2 h-screen hidden">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="#">Login</a>
+            <a href="#">Product</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+    <div class="flex items-center"><a href="/">Product</a>><a href="#">Mobile</a>
+        ><a class="EtYbJs" href="#">Smartphone</a>
+        ><a class="#">Samsung</a>
+        ><span tabindex="0">Samsung A15</span></div>
+
+    <div class="container w-11/12 m-auto">
+        <div class="grid grid-cols-2 content-center items-center h-fit bg-white p-8">
+
+            <div class="flex flex-column flex-wrap w-1/2">
+                <div class="relative flex w-full">
+                    <div class="carousel-item">
+                        <img src="hp.avif" class="max-h-96">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="a15.webp" class="max-h-96">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="a15-1.jpg" class="max-h-96">
+                    </div>
+                    <a class="prev-button" onclick="plusSlides(-1)">❮</a>
+                    <a class="next-button" onclick="plusSlides(1)">❯</a>
+                </div>
+
+
+                <div class="grid grid-cols-4 col-auto grid-flow-row">
+                    <a href="https://bootdey.com/snippets/preview/shop-product-detail#">
+                        <img src="hp.avif"> </a>
+                    <a href="https://bootdey.com/snippets/preview/shop-product-detail#">
+                        <img src="hp.avif"> </a>
+                    <a href="https://bootdey.com/snippets/preview/shop-product-detail#">
+                        <img src="hp.avif"> </a>
+                    <a href="https://bootdey.com/snippets/preview/shop-product-detail#">
+                        <img src="hp.avif"> </a>
+                </div>
+            </div>
+            <!--<img src="main/hp.avif">-->
+            <div class="flex flex-col">
+                <div class="flex flex-col space-y-4 content-center p-4">
+                    <h2>Samsung A15</h2>
+                    <h4>Harga: RP 3.999.000</h4>
+                    <h4>Warna:</h4>
+                    <h4>Model:</h4>
+                </div>
+                <div class="flex flex-row">
+                    <section class="flex items-center">
+                        <h3>Kuantitas</h3>
+                        <div class="flex items-center">
+                            <div style="margin-right: 15px;">
+                                <div class="">
+                                    <button aria-label="Decrease"
+                                        class="h-8 px-4 m-2 text-sm text-gray-900 bg-gray-100">-</button><input class=""
+                                        type="text" role="spinbutton" aria-live="assertive" aria-valuenow="1"
+                                        value="1"><button aria-label="Increase"
+                                        class="h-8 px-4 m-2 text-sm text-gray-900 bg-gray-100">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div id="cart-bt" class="flex p-1 h-fit m-2">
+                        <a class="bg-red-500 text-center text-gray-100 p-2" href="#">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="page-product__shop">
+        <h2>
+    </section>
+    <div class="flex flex-col content-center w-11/12 mx-auto">
+        <span class="flex p-4 bg-gray-200 w-full">Deskripsi Produk</span>
+        <div class="flex px-6 flex-col">
+        <h4>Spesifikasi:</h4>
+        <div>
+            <ul class="list-none flex flex-col space-y-4">
+                <li>CPU Speed : 2.2GHz, 2GHz </li>
+                <li>RAM : 8 GB</li>
+                <li>Storage : 128GB/256GB</li>
+                <li>Size (Main_Display) :
+                    6.5" full rectangle /
+                    6.3" rounded corners</li>
+                <li>Weight (g) : 200</li>
+            </ul>
+        </div>
+        <div class="flex flex-row justify-center content-center">
+            <img src="det1.avif" class="w-1/4">
+            <img src="det3.webp" class="w-1/4">
+            <img src="det4.webp" class="w-1/4">
+        </div>
+    </div>
+</div>
+    </div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("carousel-item");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "20%";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+</body>
