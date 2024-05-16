@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Detail</title>
+    <style>
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #143a51;
+            ;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            text-align: center;
+        }
+
+        .next-button,
+        .prev-button {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: #000;
+        }
+
+        .next-button {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        #hamburger {
+
+            width: 35px;
+            height: 5px;
+            background-color: white;
+            margin: 6px 0;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+
+    </script>
+
+</head>
+
+<body class="bg-gray-100">
+    <!--<div class="text-6xl text-gray-200 bg-sky-700">TEST</div>-->
+
+    <div id="header-section"
+        class="flex flex-row w-full h-1/6 text-sky-950 border-b-4 border-sky-950 border-solid justify-between p-5 shadow-md">
+        <div id="header-logo" class="flex flex-row items-center pl-2 justify-around w-50">
+            <a href="index.html" class="text-2xl pl-4 font-semibold">E-TALASE</a>
+        </div>
+        <div class="items-end">
+            <nav id="header-menu">
+                <ul class="flex flex-row">
+                    <li><a href="#"><img src="images/user-icon.png"></a></li>
+                    <li><a href="#"><img src="images/trolly-icon.png"></a></li>
+                    <li><a href="#"><img src="images/search-icon.png"></a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--<div
+            class="sidenav flex flex-col text-gray-200 text-4xl bg-sky-700 w-1 hover:w-fit flex-wrap pl-10 pr-2 h-screen hidden">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="#">Login</a>
+            <a href="#">Product</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>-->
+    </div>
+
+    <div class="bg-sky-950 text-white w-full h-1/4">
+        <div class="container flex flex-row p-2 text-md h-1/4 mx-1">
+            <div class="text-left justify-around flex flex-row w-1/4">
+                <div class="lg:hidden flex flex-col cursor-pointer" onclick="openNav()">
+                    <div id="hamburger"></div>
+                    <div id="hamburger"></div>
+                    <div id="hamburger"></div>
+                </div>
+                <h2 class="text-xl text-left">CATEGORY</h2>
+            </div>
+            <div class="overflow-x-hidden h-fit w-3/4">
+                <nav class="justify-evenly">
+                    <ul class="lg:flex hidden flex-row justify-evenly w-full">
+                        <li><a href="#">Home Electronics</a></li>
+                        <li><a href="#">Computers & Gadgets</a></li>
+                        <li><a href="#">Handphones</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Cameras</a></li>
+                        <li><a href="#">Kitchen Appliances</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div id="sidenav"
+        class="lg:hidden flex flex-col align-top w-0 h-full absolute bg-sky-950 text-white overflow-x-hidden">
+        <nav id="sidenav">
+            <ul id="sidenav" class="pl-4">
+                <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
+                <li><a href="#">Home Electronics</a></li>
+                <li><a href="#">Computers & Gadgets</a></li>
+                <li><a href="#">Handphones</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Cameras</a></li>
+                <li><a href="#">Kitchen Appliances</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="flex flex-row items-center pl-4"><a href="/">Product</a>><a href="#">Mobile</a>
+        ><a class="" href="#">Smartphone</a>
+        ><a class="#" href="#">Samsung</a>
+        ><span tabindex="0">Samsung A15</span>
+    </div>
+
+    <div class="w-11/12 m-auto shadow-xl">
+        <div
+            class="flex lg:flex-row flex-col justify-items-center content-center align-middle items-center h-fit bg-white px-4 w-full">
+
+            <div class="flex lg:flex-col flex-row lg:w-1/2 lg:mx-auto p-8">
+                <div id="imgslider" class="flex w-full lg:h-96 justify-center lg:order-first order-last">
+                    <div id="carousel_item" class="align-bottom max-w-md max-h-80">
+                        <img id="imgview" src="hp.avif" class="lg:max-h-80">
+                    </div>
+
+                </div>
+                <div id="imgmini" class="flex lg:flex-row flex-col lg:flex-wrap my-1 lg:order-last order-first h-1/2">
+                    <img onclick="myFunction(this)" src="hp.avif"
+                        class="cursor-pointer align-middle object-contain h-24 hover:border-solid border-none border-2 border-black">
+
+                    <img onclick="myFunction(this)" src="a15.webp"
+                        class="cursor-pointer align-middle object-contain h-24 hover:border-solid border-none border-2 border-black">
+
+                    <img onclick="myFunction(this)" src="a15-1.jpg"
+                        class="cursor-pointer align-middle object-contain h-24 hover:border-solid border-none border-2 border-black">
+
+                    <img onclick="myFunction(this)" src="det1.avif"
+                        class="cursor-pointer align-middle object-contain h-24 hover:border-solid border-none border-2 border-black">
+                </div>
+
+
+            </div>
+
+            <div class="flex flex-col min-h-96 shadow-xl lg:w-1/2 w-full lg:my-4 p-4">
+                <div class="mx-auto">
+                    <div class="flex flex-col space-y-4 content-center p-4">
+                        <h1 class="font-semibold text-xl">Samsung A15</h1>
+                        <h2 class="font-bold text-2xl">Rp 2.499.000</h2>
+                        <h2 class="text-gray-500 text-lg line-through">Rp 3.199.000</h2>
+                        <div class="flex h-fit items-center">
+                            <h4>Warna: </h4>
+                            <section class="mx-2 justify-around">
+                                <button
+                                    class="bg-white text-center text-black p-2 hover:text-red-500 hover:border-red-500 border border-black border-solid"
+                                    href="#">Hitam</button>
+                                <button
+                                    class="bg-white text-center text-black p-2 hover:text-red-500 hover:border-red-500 border border-black border-solid"
+                                    href="#">Putih</button>
+                            </section>
+                        </div>
+                        <div class="flex h-fit items-center">
+                            <h4>Varian:</h4>
+                            <section class="mx-2 justify-around">
+                                <button
+                                    class="bg-white text-center text-black p-2 hover:text-red-500 hover:border-red-500 border border-black border-solid"
+                                    href="#">6/128 GB</button>
+                                <button
+                                    class="bg-white text-center text-black p-2 hover:text-red-500 hover:border-red-500 border border-black border-solid"
+                                    href="#">8/256 GB</button>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="flex flex-row items-center">
+                        <section class="flex items-center p-2">
+                            <h3>Kuantitas</h3>
+                            <div class="flex items-center">
+                                <button aria-label="Decrease" class="h-8 px-4 m-2 text-sm text-gray-900 bg-gray-100"
+                                    onclick="buttonClickDec()">-</button>
+                                <input id="quantity" class="w-1/4 " type="number" role="spinbutton" value="1">
+                                <button aria-label="Increase" class="h-8 px-4 m-2 text-sm text-gray-900 bg-gray-100"
+                                    onclick="buttonClickInc()">+</button>
+                            </div>
+                        </section>
+                        <div id="cart_bt" class="flex p-1 h-fit items-center">
+                            <a class="bg-red-500 text-center text-gray-100 p-2 hover:text-white hover:bg-gray-700"
+                                href="#">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col content-center w-11/12 mx-auto shadow-xl my-5">
+        <span class="flex p-4 bg-gray-100 w-full">Deskripsi Produk</span>
+        <div class="flex p-6 flex-col bg-white">
+            <h4>Spesifikasi:</h4>
+            <div>
+                <ul class="list-none flex flex-col space-y-4">
+                    <li>CPU Speed : 2.2GHz, 2GHz </li>
+                    <li>RAM : 8 GB</li>
+                    <li>Storage : 128GB/256GB</li>
+                    <li>Size (Main_Display) :
+                        6.5" full rectangle /
+                        6.3" rounded corners</li>
+                    <li>Weight (g) : 200</li>
+                </ul>
+            </div>
+            <div class="flex flex-row justify-center content-center">
+                <img src="det1.avif" class="w-1/4">
+                <img src="det3.webp" class="w-1/4">
+                <img src="det4.webp" class="w-1/4">
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="bg-sky-950 text-white">
+        <div class="container p-8 h-auto m-auto">
+            <div id="footer_icon" class="flex flex-row content-between justify-between mx-auto relative">
+                <div class="footer-logo"><a href="index.html">
+                        <h1>E-TALASE</h1>
+                    </a></div>
+                <div class="social-icon">
+                    <ul class="flex flex-row">
+                        <li><a href="#"><img src="images/fb-icon.png"></a></li>
+                        <li><a href="#"><img src="images/twitter-icon.png"></a></li>
+                        <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
+                        <li><a href="#"><img src="images/instagram-icon.png"></a></li>
+                        <li><a href="#"><img src="images/youtub-icon.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="flex flex-row flex-wrap mx-auto justify-between">
+                    <div id="col" class="flex-[0_0_50%] relative max-w-1/2 py-4 pr-12">
+                        <h4 class="adderss_text">About</h4>
+                        <p class="ipsum_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation u</p>
+                    </div>
+                    <div id="col" class="flex-[0_0_50%] relative max-w-1/2 py-4 pr-12">
+                        <h4 class="adderss_text">Menu</h4>
+                        <div class="footer_menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="computers.html">Computers</a></li>
+                                <li><a href="Mans_clothes.html">Gadgets</a></li>
+                                <li><a href="womans_clothes.html">Electronics</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="col" class="flex-[0_0_50%] relative max-w-1/2 py-4 pr-12">
+                        <h4 class="adderss_text">Useful Link</h4>
+                        <div class="footer_menu">
+                            <ul>
+                                <li><a href="#">Adipiscing</a></li>
+                                <li><a href="#">Elit, sed do</a></li>
+                                <li><a href="#">Eiusmod</a></li>
+                                <li><a href="#">Tempor</a></li>
+                                <li><a href="#">incididunt</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="col" class="flex-[0_0_50%] relative max-w-1/2 py-4 pr-12">
+                        <div class="footer_menu">
+                            <h4 class="adderss_text">Contact</h4>
+                            <div class="call_text"><img src="images/map-icon.png"><span class="paddlin_left_0"><a
+                                        href="#">London 145 United Kingdom</a></span></div>
+                            <div class="call_text"><img src="images/call-icon.png"><span class="paddlin_left_0"><a
+                                        href="#">+7586656566</a></span></div>
+                            <div class="call_text"><img src="images/mail-icon.png"><span class="paddlin_left_0"><a
+                                        href="#">volim@gmail.com</a></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function myFunction(img) {
+            var navElements = document.querySelectorAll('#imgmini img');
+            for (var i = 0; i < navElements.length; i++) {
+                navElements[i].style.borderStyle = "none";
+            }
+            var x = document.getElementById("carousel_item");
+            x.querySelector("#imgview").src = img.src;
+            img.style.borderStyle = "solid";
+            img.style.border = "1px solid black";
+        }
+        function openNav() {
+            document.getElementById("sidenav").style.width = "20%";
+        }
+
+        function closeNav() {
+            document.getElementById("sidenav").style.width = "0";
+        }
+
+        function buttonClickInc() {
+            document.getElementById('quantity').stepUp(1);
+        }
+
+        function buttonClickDec() {
+            document.getElementById('quantity').stepDown(1);
+        }
+    </script>
+</body>
