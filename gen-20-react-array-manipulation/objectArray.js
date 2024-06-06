@@ -1,5 +1,6 @@
 const axios = require('axios');
 
+
 let objArray = [];
 let cartArray = [];
 
@@ -16,6 +17,39 @@ function runAxios() {
     console.log(error);
   });
 }
+function addToCart(srcArray, destArray, itemId, itemCount) {
+  let ob = srcArray.find(e => e.id == itemId);
+  //console.log(ob);
+  let cartObj = {
+    item: ob,
+    quantity: parseInt(itemCount)
+  }
+  destArray.push(cartObj);
+}
+
+function editItem(cartArray, itemId, prop, val) {
+
+  let ob = cartArray.find(x => { return x.item.id == itemId });
+  //console.log(ob);
+
+  if (prop == "quantity") {
+    editProperty(cartArray.find(x => { return x.item.id == itemId }), prop, val);
+    console.log(cartArray.find(x => { return x.item.id == itemId }));
+
+  } else {
+    if (prop in ob.item) {
+      editProperty(cartArray.find(x => { return x.item.id == itemId }).item, prop, val);
+      //cartArray[idx][select] = val;
+
+    } else console.log("Error: property not found\n");
+  }
+}
+function deleteItem(cartArray, itemId) {
+  let idx = cartArray.findIndex(x => { return x.item.id == itemId });
+  cartArray.splice(idx, 1);
+  console.log(cartArray);
+}
+
 
 const readline = require('readline');
 const rl = readline.createInterface({
@@ -27,7 +61,6 @@ function isNumber(value) {
   return !isNaN(parseFloat(value)) && isFinite(value);
 }
 function editProperty(object, key, value) {
-
   if (isNumber(value)) value = parseInt(value);
   object[key] = value;
 }
@@ -43,13 +76,7 @@ var recursiveAsyncReadLine = function () {
       rl.question('Add object to cart (item id): ', (select) => {
         rl.question('Amount: ', (quantity) => {
           //if (select == 'exit') return rl.close();
-          let ob = objArray.find(e => e.id == select);
-          //console.log(ob);
-          let cartObj = {
-            item: ob,
-            quantity: parseInt(quantity)
-          }
-          cartArray.push(cartObj);
+          addToCart(objArray, cartArray, select, quantity);
           console.log(cartArray);
           recursiveAsyncReadLine();
         })
@@ -58,35 +85,22 @@ var recursiveAsyncReadLine = function () {
     }
     if (select == '3') {
       rl.question('Select object in cart to edit (item id): ', (select) => {
-        let id = select;
-        let ob = cartArray.find(x => { return x.item.id == id });
+        //let id = select;
+        let ob = cartArray.find(x => { return x.item.id == select });
         console.log(ob);
         rl.question('Select property to edit: ', (prop) => {
-          if (prop == "quantity") {
-            rl.question('Edit Quantity : ', (val) => {
-              editProperty(cartArray.find(x => { return x.item.id == id }), prop, parseInt(val));
-              console.log(cartArray.find(x => { return x.item.id == id }));
-              recursiveAsyncReadLine();
-            });
-
-          } else {
-            if (prop in ob.item) {
-              rl.question('Edit Value : ', (val) => {
-                editProperty(cartArray.find(x => { return x.item.id == id }).item, prop, val);
-                //cartArray[idx][select] = val;
-                console.log("New data:");
-                console.log(cartArray.find(x => { return x.item.id == id }));
-                recursiveAsyncReadLine();
-              });
-            } else console.log("Error: property not found\n");
-          }
+          rl.question('Edit Value : ', (val) => {
+            editItem(cartArray,select,prop,val);
+            console.log("New data:");
+            console.log(cartArray.find(x => { return x.item.id == select }));
+            recursiveAsyncReadLine();
+          });
         });
       });
     }
     if (select == '4') {
       rl.question('Select object in cart to delete (item id): ', (id) => {
-        let idx = cartArray.findIndex(x => { return x.item.id == id });
-        let ob = cartArray.splice(idx, 1);
+        deleteItem(cartArray, id)
         console.log(cartArray);
         recursiveAsyncReadLine();
       });
@@ -97,7 +111,6 @@ var recursiveAsyncReadLine = function () {
     };
   });
 }
-
 
 runAxios();
 //console.log("Data Info:\n");
