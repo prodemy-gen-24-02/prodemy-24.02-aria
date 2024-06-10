@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
@@ -7,17 +7,12 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import useSWR from 'swr'
 import axiosFetch from 'src/components/AxiosFetch'
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
 
 
 
-function AdminFormUpdate() {
-  let { paramId } = useParams();
-  //const { data: prod1Data, error: error1, isLoading: load1 } = useSWR(`http://localhost:3001/products_hp/${paramId}`, axiosFetch);
+function AdminForm() {
+
   //const [idState, setIdState] = useState(0);
-  //if (load1) return <h2>Loading...</h2>;
-  //const [idState, setIdState] = useState(0);
-
   const [formData, setFormData] = useState(
     {
       id: 0,
@@ -26,6 +21,7 @@ function AdminFormUpdate() {
       price: 0,
       rate: 0,
       thumbs: [],
+      category: "",
       brand: "",
       discount: 0,
       desc: "",
@@ -33,22 +29,6 @@ function AdminFormUpdate() {
     }
   );
 
-  const onClickEdit = async () => {
-    await axios.get(`http://localhost:3001/products_hp/${paramId}`).then((res) => {
-      const payload = res.data;
-      //console.log(payload);
-      setValue("title", res.data.title);
-      setValue("price", res.data.price);
-      setValue("category", res.data.category);
-      setValue("brand", res.data.brand);
-      setValue("discount", res.data.discount);
-      setValue("desc", res.data.desc);
-      setValue("image", res.data.image);
-      setValue("stock", res.data.stock);
-      //setModalTitle("Edit Item");
-      //setFormData(res.data);
-    });
-  };
 
   const schema = yup.object().shape({
     title: yup.string().required("Name is required").min(5, "Name too short"),
@@ -63,7 +43,7 @@ function AdminFormUpdate() {
   });
   const onSubmitForm = (data) => {
     data.rate = 0;
-    //console.log(formData);
+    console.log(data);
     alert(`Entered Data: 
     Product name: ${data.title}
     Price: ${data.price}
@@ -74,23 +54,15 @@ function AdminFormUpdate() {
     Image URL: ${data.image}
     Stock: ${data.stock}`
     );
-    axios
-      .put(`http://localhost:3001/products_hp/${paramId}`, data)
-      .then(() => {
-        reset();
-        mutate();
-      })
+    axios.post("http://localhost:3001/products_hp", data).then(() => {
+      mutate();
+    })
       .catch((error) => {
         console.log("Error", error);
       });
-
   };
 
 
-  useEffect(()=>{  
-  onClickEdit();
-  //console.log(formData);
-  },[]);
   return (
     <>
 
@@ -101,36 +73,33 @@ function AdminFormUpdate() {
             <label>Product Name:</label>
             <div>
               <input className='border-2 border-gray-300 p-2 w-full'
-                
+                placeholder="Required"
                 {...register("title")}
                 name="title"
                 id="title"
                 type="text"
-                
+
               />
               <p className="text-red-500">{errors.title?.message}</p>
             </div>
             <label>Price:</label>
             <div>
               <input className='border-2 border-gray-300 p-2 w-full'
-                
                 {...register("price")}
                 name="price"
                 id="price"
                 type="number"
-                
+
               />
               <p className="text-red-500">{errors.price?.message}</p>
             </div>
             <label>Category:</label>
             <div>
               <select className='border-2 border-gray-300 p-2 w-full'
-                
+                placeholder="Required"
                 {...register("category")}
                 name="category"
-                id="category"
-                
-              >
+                id="category">
                 <option value="Smartphone">Smartphone</option>
                 <option value="Computers">Computers</option>
                 <option value="Accessories">Accessories</option>
@@ -141,61 +110,88 @@ function AdminFormUpdate() {
             <label>Brand:</label>
             <div>
               <input className='border-2 border-gray-300 p-2 w-full'
-                
+                placeholder="Required"
                 {...register("brand")}
                 name="brand"
                 id="brand"
                 type="text"
-                
+
               />
               <p className="text-red-500">{errors.brand?.message}</p>
             </div>
             <label>Discount:</label>
             <div>
               <input className='border-2 border-gray-300 p-2 w-full'
-                
                 {...register("discount")}
                 name="discount"
                 id="discount"
                 type="number"
-                
+
               />
             </div>
             <label>Enter description:</label>
             <div>
               <input className='border-2 border-gray-300 p-2 w-full'
-                
+                placeholder="Required"
                 {...register("desc")}
                 name="desc"
                 id="desc"
                 type="text"
-                
+
               />
               <p className="text-red-500">{errors.desc?.message}</p>
             </div>
-            <label>Image URL:</label>
-            <div>
-              <input className='border-2 border-gray-300 p-2 w-full'
-                
-                {...register("image")}
-                name="image"
-                id="image"
-                type="text"
-                
-              />
-            </div>
+            
             <label>Stock Quantity:</label>
             <div>
               <input className='border-2 border-gray-300 p-2 w-full'
-                
                 {...register("stock")}
                 name="stock"
                 id="stock"
                 type="number"
-                
+
               />
             </div>
+            <label>Image1 URL:</label>
+            <div>
+              <input className='border-2 border-gray-300 p-2 w-full'
+                {...register("image")}
+                name="image"
+                id="image"
+                type="text"
 
+              />
+            </div>
+            <label>Image2 URL:</label>
+            <div>
+              <input className='border-2 border-gray-300 p-2 w-full'
+                {...register("image")}
+                name="image"
+                id="image"
+                type="text"
+
+              />
+            </div>
+            <label>Image3 URL:</label>
+            <div>
+              <input className='border-2 border-gray-300 p-2 w-full'
+                {...register("image")}
+                name="image"
+                id="image"
+                type="text"
+
+              />
+            </div>
+            <label>Image4 URL:</label>
+            <div>
+              <input className='border-2 border-gray-300 p-2 w-full'
+                {...register("image")}
+                name="image"
+                id="image"
+                type="text"
+
+              />
+            </div>
           </div>
 
 
@@ -207,4 +203,4 @@ function AdminFormUpdate() {
   )
 }
 
-export default AdminFormUpdate;
+export default AdminForm;
