@@ -11,10 +11,12 @@ import banner1 from 'src/assets/images/img1.jpg'
 //import { prod2 } from 'src/data/ListArray'
 import useSWR from 'swr'
 import axiosFetch from 'src/components/AxiosFetch'
-import { CartContext } from 'src/components/CartContext'
-import Cart from 'src/components/Cart';
+//import { CartContext } from 'src/components/CartContext'
 
-function Home() {
+import {connect} from 'react-redux';
+import { updateCartItem } from 'src/store/action/cartAction'
+
+function Home({cart,updateCartItem}) {
 
   const {data:prodData , error:error0, isLoading:load0} = useSWR("http://localhost:3001/products",axiosFetch,    {
     revalidateOnFocus: false,
@@ -28,25 +30,24 @@ function Home() {
   if (error0) return <div>Failed to fetch data.</div>;
   if (load0) return <h2>Loading...</h2>;
 
-  console.log(prodData);
+  //console.log(prodData);
   const prod1Data=prodData["products_hp"];
   const prod2Data=prodData["products_pc"];
   const prod3Data=prodData["products_acc"];
 
-  const { cartItems, addToCart } = useContext(CartContext);
-  //const [promoData, setPromoData] = useState([]);
-  //const [showModal, setshowModal] = useState(false);
-  
-  /*const toggleCart = () => {
-    setshowModal(!showModal);
-  };*/
+  //const { cartItems, addToCart } = useContext(CartContext);
 
-  /*useEffect(()=>{
-    let promo = [];
-    promo.push(prod1Data[0],prod1Data[3],prod1Data[6],prod1Data[8],prod1Data[9]);
-    setPromoData(promo);
-    console.log(promoData);
-  },[]);*/
+  const handleAddToCart = (product) => {
+    
+    const item = cart.items.find(it => it.product.id == product.id);
+    const prevQuantity = item ? item.quantity : 0;
+    //console.log(product);
+    updateCartItem({
+        product,
+        quantity: prevQuantity + 1
+    });
+    //console.log(cart);
+}
 
 
   return (
@@ -70,7 +71,7 @@ function Home() {
           return (
           <ProductCard
             product={product}
-            addItem={addToCart}
+            addItem={handleAddToCart}
           />
         );
       }
@@ -84,14 +85,14 @@ function Home() {
         <div className="text-left w-full text-2xl">RECOMMENDED</div>
         <Productrow
           products={prod1Data}
-          addItem={addToCart}
+          addItem={handleAddToCart}
         />
       </div>
       <div className="flex flex-col">
         <div className="text-left w-full text-2xl">NEW PRODUCTS</div>
         <Productrow
           products={prod2Data}
-          addItem={addToCart}
+          addItem={handleAddToCart}
         />
       </div>
 
@@ -99,30 +100,20 @@ function Home() {
         <div className="text-left w-full text-2xl">BEST SELLING</div>
         <Productrow
           products={prod3Data}
-          addItem={addToCart}
+          addItem={handleAddToCart}
         />
       </div>
 
     </>
   );
 };
-  /*const [posts, setPosts] = useState([]);
+   
+  const mapStateToProps = state => ({
+    cart: state.cart
+});
 
-  const getData = (link) => {
-    var requestOptions = {
-      method: "GET",
-      redirect: "follow",
-    };
-
-    fetch(link, requestOptions)
-      .then((response) => response.json())
-      .then((result) => setPosts(result))
-      .catch((error) => console.log("error", error));
-
-      
-  };
-  useEffect(() => {
-    getData("http://localhost:3001/products_promo");
-  }, []);*/
-
-export default Home;
+export default connect(
+    mapStateToProps,
+    {updateCartItem}
+)(Home);
+//export default Home;

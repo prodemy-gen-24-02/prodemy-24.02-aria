@@ -25,6 +25,8 @@ import AdminForm from './pages/AdminForm';
 import AdminFormUpdate from './pages/AdminFormUpdate';
 //import ShoppingCart from './components/ShoppingCart';
 import { CartProvider, CartContext } from 'src/components/CartContext.jsx'
+import store from './store/index.js'
+import { Provider } from 'react-redux'
 /*function ProductPage() {
   let { paramId } = useParams();
   return(
@@ -44,7 +46,7 @@ function App() {
   //);
   return (
     <>
-<CartProvider>
+<Provider store={store}>
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -54,10 +56,9 @@ function App() {
           <Route path="/admin" element={<AdminPage />} />
           <Route path="/adminform" element={<AdminForm />} />
           <Route path="/adminupdate/:paramId" element={<AdminFormUpdate />} />
-          
         </Routes>
       </Layout>
-      </CartProvider>
+      </Provider>
     </>
   );
 
