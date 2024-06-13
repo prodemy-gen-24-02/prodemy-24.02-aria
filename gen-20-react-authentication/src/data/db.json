@@ -1,0 +1,396 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "image": "/images/hp.avif",
+      "title": "SAMSUNG A15",
+      "price": 3000000,
+      "rate": 4.3,
+      "thumbs": [
+        "/images/hp.avif",
+        "/images/a15.webp",
+        "/images/a15-1.jpg",
+        "/images/det1.avif"
+      ],
+      "category": "Smartphone",
+      "brand": "Samsung",
+      "discount": 300000,
+      "desc": "Spesifikasi:\nCPU Speed : 2.2GHz, 2GHz \nRAM : 8 GB \nStorage : 128GB/256GB \nSize (Main_Display) : 6.5\" full rectangle \n6.3\" rounded corners\nWeight (g) : 200",
+      "stock": 100
+    },
+    {
+      "id": 2,
+      "image": "/images/hp1.jpg",
+      "title": "SAMSUNG A23",
+      "price": 4000000,
+      "rate": 3.8,
+      "thumbs": [
+        "/images/hp1.jpg",
+        "/images/a15.webp",
+        "/images/a15-1.jpg",
+        "/images/det1.avif"
+      ],
+      "category": "Smartphone",
+      "brand": "Samsung",
+      "discount": 0,
+      "desc": "Spesifikasi: ",
+      "stock": 100
+    },
+    {
+      "id": 3,
+      "image": "/images/hp2.avif",
+      "title": "SAMSUNG A34",
+      "price": 5000000,
+      "rate": 4.5,
+      "thumbs": [
+        "/images/hp2.avif",
+        "/images/a15.webp",
+        "/images/a15-1.jpg",
+        "/images/det1.avif"
+      ],
+      "category": "Smartphone",
+      "brand": "Samsung",
+      "discount": 0,
+      "desc": "Spesifikasi: ",
+      "stock": 100
+    },
+    {
+      "id": 4,
+      "image": "/images/hp3.webp",
+      "title": "SAMSUNG S24",
+      "price": 13000000,
+      "rate": 4.9,
+      "thumbs": [
+        "/images/hp3.webp",
+        "/images/a15.webp",
+        "/images/a15-1.jpg",
+        "/images/det1.avif"
+      ],
+      "category": "Smartphone",
+      "brand": "Samsung",
+      "discount": 1000000,
+      "desc": "Spesifikasi: ",
+      "stock": 100
+    },
+    {
+      "id": 5,
+      "image": "/images/hp4.webp",
+      "title": "SAMSUNG S24 ULTRA",
+      "price": 15000000,
+      "rate": 4,
+      "thumbs": [
+        "/images/hp4.webp",
+        "/images/a15.webp",
+        "/images/a15-1.jpg",
+        "/images/det1.avif"
+      ],
+      "category": "Smartphone",
+      "brand": "Samsung",
+      "discount": 0,
+      "desc": "Spesifikasi: ",
+      "stock": 100
+    },
+    {
+      "id": 6,
+      "image": "/images/hp5.webp",
+      "title": "POCO M3",
+      "price": 2000000,
+      "rate": 3.8,
+      "thumbs": [
+        "/images/hp5.webp",
+        "/images/a15.webp",
+        "/images/a15-1.jpg",
+        "/images/det1.avif"
+      ],
+      "category": "Smartphone",
+      "brand": "Poco",
+      "discount": 0,
+      "desc": "Spesifikasi: ",
+      "stock": 100
+    },
+    {
+      "id": 7,
+      "image": "/images/hp6.webp",
+      "title": "POCO X5",
+      "price": 3500000,
+      "rate": 4.5,
+      "thumbs": [
+        "/images/hp6.webp",
+        "/images/a15.webp",
+        "/images/a15-1.jpg",
+        "/images/det1.avif"
+      ],
+      "category": "Smartphone",
+      "brand": "Poco",
+      "discount": 500000,
+      "desc": "Spesifikasi: ",
+      "stock": 100
+    },
+    {
+      "id": 8,
+      "image": "/images/hp7.jpg",
+      "title": "IPHONE 11",
+      "price": 7000000,
+      "rate": 3.1,
+      "thumbs": [
+        "/images/hp7.jpg",
+        "/images/a15.webp",
+        "/images/a15-1.jpg",
+        "/images/det1.avif"
+      ],
+      "category": "Smartphone",
+      "brand": "Apple",
+      "discount": 0,
+      "desc": "Spesifikasi: ",
+      "stock": 100
+    },
+    {
+      "id": 9,
+      "image": "/images/hp8.jpg",
+      "title": "IPHONE 13",
+      "price": 12000000,
+      "rate": 4.8,
+      "thumbs": [
+        "/images/hp8.jpg",
+        "/images/a15.webp",
+        "/images/a15-1.jpg",
+        "/images/det1.avif"
+      ],
+      "category": "Smartphone",
+      "brand": "Apple",
+      "discount": 1000000,
+      "desc": "Spesifikasi: ",
+      "stock": 100
+    },
+    {
+      "id": 10,
+      "image": "/images/hp9.jpg",
+      "title": "IPHONE 15",
+      "price": 16000000,
+      "rate": 4.2,
+      "thumbs": [
+        "/images/hp9.jpg",
+        "/images/a15.webp",
+        "/images/a15-1.jpg",
+        "/images/det1.avif"
+      ],
+      "category": "Smartphone",
+      "brand": "Apple",
+      "discount": 1000000,
+      "desc": "Spesifikasi: ",
+      "stock": 100
+    },
+    {
+      "title": "bbbbbbbbbbbbbbb",
+      "price": 1000000,
+      "category": "Accessories",
+      "brand": "sumsung",
+      "discount": 0,
+      "desc": "aaaaa",
+      "image": "fgsggsg",
+      "stock": "9999",
+      "rate": 0,
+      "id": 21
+    },
+    {
+      "id": 11,
+      "image": "/images/pc.jpg",
+      "title": "Dell",
+      "price": 5000000,
+      "rate": 4.3,
+      "thumbs": [],
+      "discount": 0,
+      "category": "Computer"
+    },
+    {
+      "id": 12,
+      "image": "/images/pc.jpg",
+      "title": "Dell",
+      "price": 6000000,
+      "rate": 4.2,
+      "thumbs": [],
+      "discount": 0,
+      "category": "Computer"
+    },
+    {
+      "id": 13,
+      "image": "/images/pc.jpg",
+      "title": "Dell",
+      "price": 7000000,
+      "rate": 4.2,
+      "thumbs": [],
+      "discount": 0,
+      "category": "Computer"
+    },
+    {
+      "id": 14,
+      "image": "/images/pc.jpg",
+      "title": "Dell",
+      "price": 8000000,
+      "rate": 4.2,
+      "thumbs": [],
+      "discount": 0,
+      "category": "Computer"
+    },
+    {
+      "id": 15,
+      "image": "/images/pc.jpg",
+      "title": "Dell",
+      "price": 9000000,
+      "rate": 4.2,
+      "thumbs": [],
+      "discount": 0,
+      "category": "Computer"
+    },
+    {
+      "id": 16,
+      "image": "/images/headphone.webp",
+      "title": "Fantech",
+      "price": 5000000,
+      "rate": 4.3,
+      "thumbs": [],
+      "discount": 0,
+      "category": "Accessories"
+    },
+    {
+      "id": 17,
+      "image": "/images/headphone.webp",
+      "title": "Fantech",
+      "price": 6000000,
+      "rate": 4.2,
+      "thumbs": [],
+      "discount": 0,
+      "category": "Accessories"
+    },
+    {
+      "id": 18,
+      "image": "/images/headphone.webp",
+      "title": "Fantech",
+      "price": 7000000,
+      "rate": 4.2,
+      "thumbs": [],
+      "discount": 0,
+      "category": "Accessories"
+    },
+    {
+      "id": 19,
+      "image": "/images/headphone.webp",
+      "title": "Fantech",
+      "price": 8000000,
+      "rate": 4.2,
+      "thumbs": [],
+      "discount": 0,
+      "category": "Accessories"
+    },
+    {
+      "id": 20,
+      "image": "/images/headphone.webp",
+      "title": "Fantech",
+      "price": 9000000,
+      "rate": 4.2,
+      "thumbs": [],
+      "discount": 0,
+      "category": "Accessories"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "category": "Smartphone"
+    },
+    {
+      "id": "2",
+      "category": "Computer"
+    },
+    {
+      "id": "3",
+      "category": "Accessories"
+    },
+    {
+      "id": "4",
+      "category": "Camera"
+    },
+    {
+      "id": "5",
+      "category": "Home Electronic"
+    },
+    {
+      "id": "6",
+      "category": "Gadget"
+    },
+    {
+      "id": "7",
+      "category": "Others"
+    }
+  ],
+  "brands": [
+    {
+      "id": "1",
+      "category": "Samsung"
+    },
+    {
+      "id": "2",
+      "category": "Apple"
+    },
+    {
+      "id": "3",
+      "category": "Poco"
+    },
+    {
+      "id": "4",
+      "category": "Redmi"
+    },
+    {
+      "id": "5",
+      "category": "Asus"
+    },
+    {
+      "id": "6",
+      "category": "Sony"
+    }
+  ],
+  "users": [
+    {
+      "email": "disturbedsevenx@gmail.com",
+      "password": "$2a$10$K4dmMAzVxsjLRkAFT2.EZuzxKUhwkJ1p8HzHcdfNbBCPiOKknrr7G",
+      "role": "USER",
+      "id": 1
+    },
+    {
+      "email": "TESTTT2@ASASAS",
+      "password": "$2a$10$HBOMrQqy.0ynZ2DPqLTzXeKxc5j/FIKhtGjn5NSYUoZD.zR9vA1nW",
+      "role": "ADMIN",
+      "id": 2
+    },
+    {
+      "email": "TESTT111T2@ASASAS123",
+      "password": "$2a$10$zSyppP/wnkxM8gqB.28Nwu4n9qvWrA8pZ/EoDkpvcnumOSsSVpwhm",
+      "role": "USER",
+      "id": 3
+    },
+    {
+      "email": "abcde@gmail.com",
+      "password": "$2a$10$KnLGHltNtMjZ2KM3I8EJr.rq82pL6.RrdOCO.Kx4ytlkL6XwwLePi",
+      "role": "ADMIN",
+      "id": 4
+    },
+    {
+      "email": "admin@admin",
+      "password": "$2a$10$2MPhe0sw03KNjICb2w8fQ.9u8Q4rHaGyxg4gGIILfjgy6cfUZk0N2",
+      "role": "ADMIN",
+      "id": 5
+    },
+    {
+      "email": "12345@abcde",
+      "password": "$2a$10$38r2rxs1/05lqDGIyiKMgOrK6PvplTeeXIl9r1nUWcAMHW45n8z2m",
+      "role": "ADMIN",
+      "id": 6
+    },
+    {
+      "email": "aaaaa@gmail",
+      "password": "$2a$10$dE.a4fgBhrdvqUfnV8Ry8e9O9AZfXuzJmj7TrX34x9Gp90oPxCJqK",
+      "role": "USER",
+      "id": 7
+    }
+  ]
+}
