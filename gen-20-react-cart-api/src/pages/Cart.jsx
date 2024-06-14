@@ -34,7 +34,7 @@ function Cart({ showModal, toggle }) {
   //console.log(totalPrice);
 
   function handleClearCart() {
-    cartItems.forEach(element => {
+    cartData.forEach(element => {
       axios.delete(`http://localhost:3001/cart/${element.id}`);
     });
     mutateCart();
