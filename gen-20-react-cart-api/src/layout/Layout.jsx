@@ -27,16 +27,22 @@ function Layout({ children }) {
     setshowModal(!showModal);
     //console.log(showModal);
   };
+  
   const toggleLogin = () => {
-    navigate('/login')
     //setShowLogin(!showLogin);
-    //console.log(showModal);
+    //console.log(showLogin);
+    navigate('/login');
   };
+
+
+  const toggleUser = () => {
+    navigate('/logintest');
+  }
 
   if (useLocation().pathname == "/admin" || useLocation().pathname == "/adminform" || useLocation().pathname == "/adminupdate/") {
     return (
       <>
-        <HeaderAdmin />
+        <HeaderAdmin userToggle={toggleUser} />
         <div className="flex flex-col justify-center pt-2 min-h-screen">{children}</div>
 
       </>
@@ -46,7 +52,7 @@ function Layout({ children }) {
       <>
         
           <Header cartToggle={toggleCart} loginToggle={toggleLogin}/>
-          <div className={`${showLogin ? "flex absolute" : "hidden"}`}>
+          <div className={`${showLogin ? "flex h-fit absolute" : "hidden"}`}>
           <Login />
           </div>
           <div className="flex flex-col justify-center pt-2">{React.cloneElement(children,{addItem})}</div>

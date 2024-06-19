@@ -81,6 +81,11 @@ function AdminPage() {
             <button onClick={handleLogout}>
 			Logout
 		</button>
+        <Link to="/">
+			<button>
+				To Home
+			</button>
+		</Link>
                 <div className="flex justify-center">
                 <Link to="/adminform">
                     <a className="text-center bg-gray-300 p-2 hover:text-white hover:bg-gray-700"

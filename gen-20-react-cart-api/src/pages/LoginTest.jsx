@@ -14,7 +14,7 @@ export default function UserPage () {
 		navigate('/')
 	}
 
-	return <>
+	return (<>
 		<h1>Page User</h1>
 		<div>
 		<button onClick={handleLogout}>
@@ -31,5 +31,5 @@ export default function UserPage () {
 		<p>Email: {user.email}</p>
 		<p>User Role: {user.role}</p>
 		</div>
-	</>
+	</>);
 }

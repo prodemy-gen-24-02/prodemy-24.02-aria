@@ -10,6 +10,6 @@ export default function AdminRoutes() {
     alert("Welcome Admin");
     return <Outlet />;
   }
-  alert("Only admin allowed");
+  //alert("Only admin allowed");
   return <Navigate to="/logintest" />;
 }

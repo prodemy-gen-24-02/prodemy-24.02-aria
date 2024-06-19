@@ -17,10 +17,13 @@ function Cart({ showModal, toggle }) {
   if (load1) return <h2>Loading...</h2>;
   //console.log(cart);
   useEffect(()=>{
-    dispatch(fillCart(cartData));
-  },[])
-  //console.log("CEK");
-  //console.log(items);
+    let input=cartData.filter(it => it.userId == user.id);
+    //let userCart=[];
+
+    dispatch(fillCart(input));
+    console.log(items);
+  },[cartData])
+
   let cartItems = items;
   //let cartState = items;
   //console.log(cartState);
@@ -34,14 +37,13 @@ function Cart({ showModal, toggle }) {
     });
   }
   //console.log(totalPrice);
-
   function handleClearCart() {
     cartData.forEach(element => {
-
-      if(element.userId==user.id) axios.delete(`http://localhost:3001/cart/${element.id}`);
+      if(element.userId==action.payload)
+      axios.delete(`http://localhost:3001/cart/${element.id}`);
     });
-    mutateCart();
     dispatch(clearCart());
+    mutateCart();
   }
 
   function handleUpdateItem(product, qty) {
@@ -56,10 +58,11 @@ function Cart({ showModal, toggle }) {
           quantity: 0
         }));
         mutateCart();
+        console.log(items);
       });
 
     } else {
-      if (prevQuantity == 0) {
+      //if (prevQuantity == 0) {
         /*axios.post("http://localhost:3001/cart", {
           userId:user.id,
           product:product,
@@ -71,34 +74,42 @@ function Cart({ showModal, toggle }) {
             quantity: prevQuantity + qty
           }));*/
 
-          console.log("THIS MEAN CART ERROR");
-          mutateCart();
+          //console.log("THIS MEAN CART ERROR");
+          //mutateCart();
        /* })
           .catch((error) => {
             console.log("Error", error);
           });*/
-      } else {
+      //} else {
         axios.put(`http://localhost:3001/cart/${item.id}`, {
           ...item,
           quantity: prevQuantity+qty
         }).then(() => {
+          if (prevQuantity + qty == 0) {
+            dispatch(updateItem({
+              ...item,
+              quantity: 0
+            }));
+            axios.delete(`http://localhost:3001/cart/${item.id}`);
+        
+        }else
           dispatch(addItem({
             ...item,
             quantity: prevQuantity + qty
           }));
-          if (prevQuantity + qty == 0) axios.delete(`http://localhost:3001/cart/${item.id}`);
+          
           mutateCart();
         }).catch((error) => {
           console.log("Error", error);
         });
         
-      }
+      //}
     }
   }
 
   return (
     showModal && (
-      <div className="flex-col flex items-center fixed inset-0 left-1/4 bg-white dark:bg-black gap-8  p-10  text-black dark:text-white font-normal uppercase text-sm">
+      <div className="flex-col flex items-center fixed inset-0 left-1/4 bg-white dark:bg-black gap-8  p-10  text-black dark:text-white font-normal uppercase text-sm h-fit">
         <h1 className="text-2xl font-bold">Cart</h1>
         <div className="absolute right-16 top-10">
           <button

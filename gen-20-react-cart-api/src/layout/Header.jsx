@@ -6,9 +6,6 @@ import icon_trolley from '/images/trolly-icon.png'
 import icon_search from '/images/search-icon.png'
 import { Link } from 'react-router-dom';
 
-function test(test) {
-    alert(test);
-};
 
 const Header = ({cartToggle, loginToggle}) => {
 

@@ -5,7 +5,7 @@ import icon_user from '/images/user-icon.png'
 import icon_trolley from '/images/trolly-icon.png'
 
 
-const HeaderAdmin = () => {
+const HeaderAdmin = ({userToggle}) => {
 
     const [sidenavOpen, setSidenavOpen] = useState(false);
 
@@ -25,7 +25,7 @@ const HeaderAdmin = () => {
                     <nav id="header-menu">
                         <ul className="flex flex-row justify-end">
                             <li className="px-4"><a href="#"><img src={icon_trolley} /></a></li>
-                            <li className="px-4"><a href="#"><img src={icon_user} /></a></li>
+                            <li className="px-4"><a onClick={userToggle}><img src={icon_user} /></a></li>
                         </ul>
                     </nav>
                 </div>

@@ -1,5 +1,6 @@
 
 import { createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 
 const initState ={
@@ -12,6 +13,7 @@ const cartSlice = createSlice({
     reducers:{
 
         clearCart:(state)=>{
+
             state.items = [];
         },
         fillCart:(state,action)=>{
@@ -40,11 +42,12 @@ const cartSlice = createSlice({
         updateItem: (state,action) => {
             const quantity = action.payload.quantity;
             const product = action.payload.product;
-            console.log("SLICER PAYLOD");
-            console.log(action.payload);
+            //console.log("SLICER PAYLOD");
+            //console.log(action.payload);
             if (quantity === 0) {
                 const items = state.items.filter(it => it.product.id !== product.id);
                 state.items= items;
+
             } else {
                 const index = state.items.findIndex(it => it.product.id === product.id);
                 const newItems = [...state.items];

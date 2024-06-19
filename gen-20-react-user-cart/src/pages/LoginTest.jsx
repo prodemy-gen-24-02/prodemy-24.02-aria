@@ -26,7 +26,7 @@ export default function UserPage () {
 			</button>
 		</Link>
 		<hr />
-		<h3>Logged In User</h3>
+		<h3>Logged In As:</h3>
 		<p>ID: {user.id}</p>
 		<p>Email: {user.email}</p>
 		<p>User Role: {user.role}</p>

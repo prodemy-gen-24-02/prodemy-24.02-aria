@@ -39,8 +39,8 @@ function ProductPage({cart,addItem}) {
           product: product,
           quantity: prevQuantity + qty
         }).then(() => {
-          console.log("INIT PROD");
-          console.log(product.id);
+          //console.log("INIT PROD");
+          //console.log(product.id);
           dispatch(addItem({
             product: product,
             quantity: prevQuantity + qty

@@ -419,7 +419,30 @@
   ],
   "cart": [
     {
-      "userId": 1,
+      "userId": 5,
+      "product": {
+        "id": 1,
+        "image": "/images/hp.avif",
+        "title": "SAMSUNG A15",
+        "price": 3000000,
+        "rate": 4.3,
+        "thumbs": [
+          "/images/hp.avif",
+          "/images/a15.webp",
+          "/images/a15-1.jpg",
+          "/images/det1.avif"
+        ],
+        "category": "Smartphone",
+        "brand": "Samsung",
+        "discount": 300000,
+        "desc": "Spesifikasi:\nCPU Speed : 2.2GHz, 2GHz \nRAM : 8 GB \nStorage : 128GB/256GB \nSize (Main_Display) : 6.5\" full rectangle \n6.3\" rounded corners\nWeight (g) : 200",
+        "stock": 100
+      },
+      "quantity": 1,
+      "id": 2
+    },
+    {
+      "userId": 5,
       "product": {
         "id": 4,
         "image": "/images/hp3.webp",
@@ -438,8 +461,146 @@
         "desc": "Spesifikasi: ",
         "stock": 100
       },
-      "quantity": 4,
-      "id": 1
+      "quantity": 1,
+      "id": 3
+    },
+    {
+      "userId": 5,
+      "product": {
+        "id": 7,
+        "image": "/images/hp6.webp",
+        "title": "POCO X5",
+        "price": 3500000,
+        "rate": 4.5,
+        "thumbs": [
+          "/images/hp6.webp",
+          "/images/a15.webp",
+          "/images/a15-1.jpg",
+          "/images/det1.avif"
+        ],
+        "category": "Smartphone",
+        "brand": "Poco",
+        "discount": 500000,
+        "desc": "Spesifikasi: ",
+        "stock": 100
+      },
+      "quantity": 1,
+      "id": 4
+    },
+    {
+      "userId": 7,
+      "product": {
+        "id": 4,
+        "image": "/images/hp3.webp",
+        "title": "SAMSUNG S24",
+        "price": 13000000,
+        "rate": 4.9,
+        "thumbs": [
+          "/images/hp3.webp",
+          "/images/a15.webp",
+          "/images/a15-1.jpg",
+          "/images/det1.avif"
+        ],
+        "category": "Smartphone",
+        "brand": "Samsung",
+        "discount": 1000000,
+        "desc": "Spesifikasi: ",
+        "stock": 100
+      },
+      "quantity": 3,
+      "id": 5
+    },
+    {
+      "userId": 7,
+      "product": {
+        "id": 1,
+        "image": "/images/hp.avif",
+        "title": "SAMSUNG A15",
+        "price": 3000000,
+        "rate": 4.3,
+        "thumbs": [
+          "/images/hp.avif",
+          "/images/a15.webp",
+          "/images/a15-1.jpg",
+          "/images/det1.avif"
+        ],
+        "category": "Smartphone",
+        "brand": "Samsung",
+        "discount": 300000,
+        "desc": "Spesifikasi:\nCPU Speed : 2.2GHz, 2GHz \nRAM : 8 GB \nStorage : 128GB/256GB \nSize (Main_Display) : 6.5\" full rectangle \n6.3\" rounded corners\nWeight (g) : 200",
+        "stock": 100
+      },
+      "quantity": 3,
+      "id": 6
+    },
+    {
+      "userId": 7,
+      "product": {
+        "id": 9,
+        "image": "/images/hp8.jpg",
+        "title": "IPHONE 13",
+        "price": 12000000,
+        "rate": 4.8,
+        "thumbs": [
+          "/images/hp8.jpg",
+          "/images/a15.webp",
+          "/images/a15-1.jpg",
+          "/images/det1.avif"
+        ],
+        "category": "Smartphone",
+        "brand": "Apple",
+        "discount": 1000000,
+        "desc": "Spesifikasi: ",
+        "stock": 100
+      },
+      "quantity": 3,
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "product": {
+        "id": 1,
+        "image": "/images/hp.avif",
+        "title": "SAMSUNG A15",
+        "price": 3000000,
+        "rate": 4.3,
+        "thumbs": [
+          "/images/hp.avif",
+          "/images/a15.webp",
+          "/images/a15-1.jpg",
+          "/images/det1.avif"
+        ],
+        "category": "Smartphone",
+        "brand": "Samsung",
+        "discount": 300000,
+        "desc": "Spesifikasi:\nCPU Speed : 2.2GHz, 2GHz \nRAM : 8 GB \nStorage : 128GB/256GB \nSize (Main_Display) : 6.5\" full rectangle \n6.3\" rounded corners\nWeight (g) : 200",
+        "stock": 100
+      },
+      "quantity": 2,
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "product": {
+        "id": 6,
+        "image": "/images/hp5.webp",
+        "title": "POCO M3",
+        "price": 2000000,
+        "rate": 3.8,
+        "thumbs": [
+          "/images/hp5.webp",
+          "/images/a15.webp",
+          "/images/a15-1.jpg",
+          "/images/det1.avif"
+        ],
+        "category": "Smartphone",
+        "brand": "Poco",
+        "discount": 0,
+        "desc": "Spesifikasi: ",
+        "stock": 100
+      },
+      "quantity": 3,
+      "id": 9
     }
   ]
 }

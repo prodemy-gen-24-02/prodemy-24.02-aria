@@ -37,11 +37,9 @@ const handleLogin = event => {
         })
 }
 return (
-<div className="flex flex-col justify-center border-2 border-gray-300">
+	<div className="flex justify-center"> 
+<div className="flex flex-col justify-center border-2 border-gray-300 mx-auto my-6 p-10 space-y-4">
 		<h1>Login</h1>
-
-
-		<hr />
 
 		<form onSubmit={handleLogin}>
 			<div>
@@ -66,6 +64,7 @@ return (
 				Login
 			</button>
 		</form>
+	</div>
 	</div>
 	)
 }

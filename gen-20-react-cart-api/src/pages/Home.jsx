@@ -36,14 +36,12 @@ function Home() {
   //const prod3Data=prodData["products_acc"];
 
   //const { cartItems, addToCart } = useContext(CartContext);
-
-
   const handleAddToCart = (product) => {
     let cart = cartData;
-    console.log(cartData);
+    //console.log(cartData);
     const item = cart.find(it => it.id == product.id);
     const prevQuantity = item ? item.quantity : 0;
-    console.log(item);
+    //console.log(item);
     if(prevQuantity==0){
     axios.post("http://localhost:3001/cart", {
       id:product.id,

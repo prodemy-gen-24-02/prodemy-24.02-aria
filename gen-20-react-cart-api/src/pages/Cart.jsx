@@ -17,13 +17,19 @@ function Cart({ showModal, toggle }) {
   if (load1) return <h2>Loading...</h2>;
   //console.log(cart);
   useEffect(()=>{
-    dispatch(fillCart(cartData));
-  },[])
+    let input=cartData;
+    let userCart=[];
+    input.forEach(element => {
+      userCart.push(element);
+    });
+    //console.log(userCart);
+    dispatch(fillCart(userCart));
+    console.log(items);
+  },[cartData])
   //console.log("CEK");
   //console.log(items);
   let cartItems = items;
-  //let cartState = items;
-  //console.log(cartState);
+
   let totalPrice = 0;
   if (cartItems !== undefined && cartItems.length > 0) {
     cartItems.forEach(element => {
@@ -90,7 +96,7 @@ function Cart({ showModal, toggle }) {
 
   return (
     showModal && (
-      <div className="flex-col flex items-center fixed inset-0 left-1/4 bg-white dark:bg-black gap-8  p-10  text-black dark:text-white font-normal uppercase text-sm">
+      <div className="flex-col flex items-center fixed inset-0 left-1/4 bg-white dark:bg-black gap-8  p-10  text-black dark:text-white font-normal uppercase text-sm h-fit">
         <h1 className="text-2xl font-bold">Cart</h1>
         <div className="absolute right-16 top-10">
           <button

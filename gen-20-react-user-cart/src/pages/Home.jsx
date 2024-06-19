@@ -42,15 +42,11 @@ function Home() {
   const handleAddToCart = (product) => {
     mutateCart();
     let cart = cartData;
-    //console.log(cartData);
     const item = cart.find(it => it.product.id == product.id && it.userId == user.id);
-
     const prevQuantity = item ? item.quantity : 0;
-    console.log("ITEM");
-    console.log(items.find(it => it.product.id == product.id && it.userId == user.id));
+
     if(prevQuantity==0){
     axios.post("http://localhost:3001/cart", {
-
       userId:user.id,
       product: product,
       quantity: prevQuantity + 1
@@ -67,7 +63,6 @@ function Home() {
       });
     }
     else{
-      
       axios.put(`http://localhost:3001/cart/${item.id}`,{
         ...item,
         quantity: prevQuantity + 1
